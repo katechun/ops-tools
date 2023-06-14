@@ -7,7 +7,7 @@
 
 注：此工具目前只在centos7上进行测试验证！在使用中出了问题，请与我联系(把问题发我邮箱)，我进行改进！
 
-#安装方法:  
+###安装方法:  
 tar -zxvf tool.tar.gz  
 cd tool  
 ./install.sh  
@@ -37,8 +37,7 @@ conf/port.list 配置要监控的端口程序
 conf/bak_tab.list   配置要备份的表，目前需要在执行install.sh之前进行配置才能生效  
 conf/del_log.list   配置日志删除功能，如果文件系统空间满了，需要删除哪些日志，首次install.sh,会find / -name “*.log”找出所有的结尾带.log的文件写道此文件里，检查有不想删除的文件，可以从列表里删除。  
 
-#定时任务说明:
-### Linux Tool Kit for Ops  
+###定时任务说明:
 # 生成检查报告  
 15 */6 * * * sh /root/autoops/tool/check/check.sh >> /root/autoops/tool/logs/ck.sh.log  2>&1  
 #生成安全报告  
@@ -64,7 +63,7 @@ conf/del_log.list   配置日志删除功能，如果文件系统空间满了，
 
 
 
-#目录结构:
+###目录结构:
 tool
 ├── backup                     #备份脚本目录  
 │   └── bak_config_table.sh    #备份配置文件脚本  
