@@ -1,0 +1,4 @@
+host=localhost
+username=root
+passwd=123456
+port=3306

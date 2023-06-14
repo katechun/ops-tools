@@ -1,0 +1,87 @@
+### 检查参数设置
+#磁盘使用率达到百分之多少告警  %
+disk_rat=80
+
+#cpu使用率达到百分之多少告警  %
+cpu_rat=85
+
+#cpu负载  根据cpu核数设置阈值  %
+cpu_load_1m=80
+cpu_load_5m=70
+cpu_load_15m=60
+
+#内存使用率达到百分之多少告警  %
+mem_rat=85
+
+#inode节点数达到百分之多少告警  %
+inode_rat=80
+
+#检查网络读写速度达到多少告警 bytes 
+network_speed=2097152
+#检查网络连接数超过阈值告警 个
+net_conns=1000
+#检查进程 内存使用达到多少或cpu达到多少告警 %
+proc_cpu_used=85
+proc_mem_used=85
+#检查线程数和打开文件数  个
+proc_threads=150
+proc_open_file=400
+
+#消耗资源最高的前多少进程  个
+top_proces=5
+
+#检查大日志文件  M
+log_size=800M
+
+#检查文件大小   M
+file_size=2048M
+
+
+###MySQL config table backup
+#备份目录
+backup_dir=/root/backup
+#备份目录多大进行删除 M 
+backupdir_size=2048
+#备份列表表名  库名.表名
+table_name=etp.backup_table_list
+
+
+
+### 删除参数设置  此参数设置要谨慎
+# 当文件系统使用率达到多少时候 删除不在使用日志文件  %
+del_nobusy_log=85
+# 当文件系统使用率达到多少时候 清空所有日志文件  %
+del_busy_log=90
+#当文件系统使用率达到多少时 清空数据库里的日表  %
+del_daily_tab=95
+
+
+
+### 安全检查
+#最大密码过期时间大于这个值会导致密码长时间不修改，容易被攻击  天
+max_passwd_days=90
+#最小密码修改时间，密码修改时间小于此值修改不了密码 天
+min_passwd_days=6
+#最小密码长度，检查密码长度设置是够小于此值  长度
+len_passwd=8
+#密码过期多长时间之前，进行密码要过期提醒  天
+age_passwd=30
+
+
+
+### 删除本工具日志  M 
+#日志目录大于多少进行删除
+logs_dir_size=1024
+#报告文件目录大于大于多少进行删除 M 
+report_dir_size=1024 
+
+
+### 邮件告警发送
+#告警发送给谁   "xxxx@xx.com xxxx@xx.com"
+to_user="xxxxxx@qq.com"
+#接收邮件的标题
+email_title="[某某项目]告警邮件"
+
+### nginx检查
+# 查看nginx日志400 499 攻击关键词 单个ip出现多少次报警
+err_ip_nums=30
